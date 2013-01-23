@@ -1,0 +1,179 @@
+Feature: Content
+
+  Background: 
+    Given that I have an installed gardens mobile app
+    And that I have at least one site connected
+
+  Scenario: As a user I can publish new content
+    Given I am logged into a site via the mobile app
+    And I tap the add icon
+    And I select a content type
+    And I fill out the fields
+    Then I have new content on my site
+
+  Scenario: As a user I can view a list of published content
+    Given that there is previously created content on the site
+    And that content is authored by the user signed into the site
+    And that I tap the Sites button
+    And I tap a Site name
+    Then I should see a list of content
+
+  Scenario: As a user I can view published content
+    Given that I have created content
+    And I tap the content preview in the list view
+    Then I see my content as it appears on the web
+
+  # Delete via swiping the list view
+  Scenario: As a user I can delete published content
+    Given that I swipe the content preview in the list view
+    And I tap the Trash Can icon
+    And I tap the Delete confirmation button
+    Then my content is deleted
+
+  # Delete via the web preview
+  Scenario: As a user I can delete published content
+    Given that I tap the content preview in the list view
+    And I tap the Trash Can icon
+    And I tap the Delete confirmation button
+    Then my content is deleted
+
+Feature: Setup
+
+  Background: 
+    Given a drupal site that includes the MASt module enabled
+
+  Scenario: As a user I can configure a content type to access from the mobile app
+    And enable MASt for that content type
+    And select a short name for that content type
+    And select an icon for that content type
+    Then I should be able to connect to this site from the mobile app
+
+  Scenario: Given that I have enabled MASt for four content types
+    And I attempt to enable MASt for a fifth content type
+    Then I get an error
+
+  Scenario: Given that I have a field that is not mobile friendly
+    And I attempt to enable MASt for that content type
+    Then I get an error
+
+Feature: Signup
+
+  Background: 
+    Given a newly installed build of the mobile app
+
+  Scenario: As a user I can signup to a mobile enabled site
+    When I start the application fresh
+    And I fill in a url with a valid site
+    Then I am presented with a log in screen
+    And I log in
+
+  Scenario: As a user I do not remember my site password
+    Given that I have signed up to a mobile site
+    And I enter an invalid password
+    And I request a new password
+    And I follow the instructions
+    Then I can log in to my site
+
+  Scenario: As a user I need to add a second site to my site list
+    Given that I have a second mobile enabled site
+    And I tap the Add Site icon
+    And I fill in a url with a valid site
+    Then I am presented with a log in screen
+    And I log in
+
+Feature: Site Settings
+
+  Background: 
+    Given that I have an installed gardens mobile app
+    And that I have at least one site connected
+    And that I tap the Sites button
+    And tap a site name in the site list
+    And tap the Gear icon
+
+  Scenario: As a user I want to change my default Author
+    When I tap on the Author field
+    Then I am presented with a list of names that I can filter
+    And I can change the default author value
+
+  Scenario: As a user I want to stay logged into my site
+    When I switch the Keep Me Logged In setting to on
+    Then The next time I access the site from the app I won’t be presented with a login
+
+  Scenario: As a user I want to be logged off of the site when the app closes
+    When I switch the Keep Me Logged In setting to off
+    Then the next time I access a site from the app I will be presented with a login
+
+  Scenario: As a user I want to set the default image size
+    When I tap on the Image size field
+    Then I can select an IOS image size
+    And the next content I create uses my saved image size
+
+  Scenario: As a user I want to know the "Legal terms" of a site I am connecting to
+    When I tap Terms of Service
+    Then I am presented with that content
+
+  Scenario: As a user I want to know the "Privacy Policy" of a site I am connecting to
+    When I tap Privacy Policy
+    Then I am presented with that content
+
+  Scenario: As a user I want to read the "About Us" content of a site I am connecting to
+    When I tap About Us
+    Then I am presented with that content
+
+  Scenario: As a user I want to be able to rate this app
+    When I tap Rate It
+    Then I am taken to the app store
+
+  Scenario: As a user I want to log out of a site
+    When I click the Sign out button
+    And I click the name of the site
+    Then I am presented with a login
+
+Feature: Sitelist
+
+  Background: 
+    Given that I have a gardens app with multiple sites
+
+  Scenario: As a user I can delete a site from the site list
+    When I tap the Edit icon
+    And I tap on the Remove icon
+    Then I am presented with a confirmation
+    And I choose Remove
+    Then my site is removed from the site list
+
+  Scenario: As a user I can add a new site from the site list
+    When I tap the Add Site icon
+    And I fill in a url with a valid site
+    Then I am presented with a log in screen
+    And I log in
+
+  Scenario: Given that I have signed out of one of my sites in the site list
+    And I tap the site name
+    Then I am presented with a log in screen
+    And I log in
+
+Feature: Social Publish
+
+  Background: 
+    Given that I have a gardens app
+    And a Drupal site with MASt enabled for at least one content type
+    And the mobile app is connected to the site
+
+  Scenario: As a user I can’t publish my content on social sites
+    Given that I have not set social publishing settings on my Drupal site
+
+  Scenario: As a user I can share my content with my personal Social networks
+    Given that my Drupal user is configured with the permission to publish to my own social networks
+    And I publish new content
+
+  Scenario: As a user I can share my content with my site’s Social networks
+    Given that my Drupal user is configured with the permission to publish to the site’s social networks
+    And I publish new content
+
+  Scenario: As a user I can share my content with both my personal and my site’s Social networks
+    Given that my Drupal user is configured with the permission to publish to my own social networks as well as the site’s
+    And I publish new content
+
+27 scenarios (27 undefined)
+159 steps (159 undefined)
+0m0.075s

@@ -1,0 +1,20 @@
+require 'pp'
+
+Dir.glob('**/*.rake').each { |r| import r }
+
+$stdout.sync = true
+
+task :default do
+
+	puts ""
+	puts "Welcome testers!"
+	puts "All the commands you need are listed below."
+	puts ""
+	puts "rake <command>             # Description"
+	puts "--------------------------------------------------------------------------------"
+	puts `rake -T`
+	puts ""
+	puts ""
+	puts ""
+
+end
