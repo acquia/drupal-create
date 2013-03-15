@@ -13,5 +13,6 @@ Drupal create is copyright of Acquia. It is licensed under the MIT License. See 
 
 Credits
 ===============
-Author: Kyle Browning, Workhabit, https://github.com/kylebrowning
-Manager: Moshe Weitzman, Acquia, http://drupal.org/moshe
+
+* Author: Kyle Browning, Workhabit, https://github.com/kylebrowning
+* Manager: Moshe Weitzman, Acquia, http://drupal.org/moshe
