@@ -1,7 +1,7 @@
-Introduction
+Drupal Create for iOS
 =============
 
-Drupal Create - an iOS mobile app which allows any content contributor to post content to their Drupal websites directly from any iOS device. The source code is available on Github. A ready-to-use app based on this project is available for install to your devices at https://itunes.apple.com/us/app/drupal-gardens/id561249662?mt=8.
+Drupal Create is an iOS app that allows any content contributor to post content to any Drupal website that has included the Drupal MASt module at http://drupal.org/project/mast. This framework was used to create the Drupal Gardens iOS app which can be downloaded from the Apple App Store at at https://itunes.apple.com/us/app/drupal-gardens/id561249662?mt=8.  You can quickly see what Drupal Create can do by downloading the Drupal Gardens app, adding and configuring the MASt module to your Drupal site and connecting.  Additional documentation and resources can be found at http://drupal.org/project/mast
 
 Contributing
 ===============
@@ -9,10 +9,4 @@ We welcome your contributions to Drupal Create. Please see https://github.com/ac
 
 License and Copyright
 ===============
-Drupal create is copyright of Acquia. It is licensed under the MIT License. See License.txt
-
-Credits
-===============
-
-* Author: Kyle Browning, Workhabit, https://github.com/kylebrowning
-* Manager: Moshe Weitzman, Acquia, http://drupal.org/moshe
+Drupal Create is copyright of Acquia and is licensed under the MIT License. See License.txt
