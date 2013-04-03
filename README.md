@@ -10,3 +10,10 @@ We welcome your contributions to Drupal Create. Please see https://github.com/ac
 License and Copyright
 ===============
 Drupal Create is copyright of Acquia and is licensed under the MIT License. See License.txt
+
+Have Questions or Comments
+==============
+Feel free to use the issue queue and wiki on Github or contact:
+
+* Author: Kyle Browning, Workhabit, https://github.com/kylebrowning
+* Manager: Moshe Weitzman, Acquia, http://drupal.org/moshe
