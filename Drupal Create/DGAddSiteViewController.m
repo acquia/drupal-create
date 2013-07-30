@@ -126,20 +126,12 @@
 
 - (NSString*) getURL {
   NSString *url = [siteUrl text];
-  NSArray *periods = [url componentsSeparatedByString:@"."];
-  NSUInteger periodCount = [periods count] - 1;
-  NSRange rangeOfURL = [url rangeOfString:@"http://"];
-  if (rangeOfURL.location == NSNotFound) {
-    if (periodCount == 1) {
-      url = [NSString stringWithFormat:@"%@%@", @"http://www.", url];
-    } else {
-      url = [NSString stringWithFormat:@"%@%@", @"http://", url];
-    }
-  } else {
-    if (periodCount == 1) {
-      url = [url stringByReplacingOccurrencesOfString:@"http://" withString:@""];
-      url = [NSString stringWithFormat:@"%@%@", @"http://www.", url];
-    }
+  NSURL *myUrl = [[NSURL alloc] initWithString: url];
+  if (!myUrl.scheme) {
+    url = [NSString stringWithFormat:@"%@%@", @"http://", url];
+  }
+  else {
+      url = [myUrl absoluteString];
   }
   return url;
 }
