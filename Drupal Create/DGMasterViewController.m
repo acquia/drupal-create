@@ -34,7 +34,7 @@
 //  [siteListViewController setModalPresentationStyle:UIModalPresentationCurrentContext];
 //  [self presentModalViewController:navController animated:YES];
   DGCameraOverlayViewController *vc = [[DGCameraOverlayViewController alloc] initWithNibName:@"DGCameraOverlayViewController" bundle:nil];
-  [self presentModalViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 - (UINavigationController*) customNavigationController
 {
@@ -72,7 +72,7 @@
     [siteListViewController setAddSiteView:YES];
   }
   [siteListViewController setModalPresentationStyle:UIModalPresentationCurrentContext];
-  [self presentModalViewController:navigationController animated:YES];
+  [self presentViewController:navigationController animated:YES completion:nil];
 }
 - (void) viewDidAppear:(BOOL)animated {
   [UIView animateWithDuration:0.5

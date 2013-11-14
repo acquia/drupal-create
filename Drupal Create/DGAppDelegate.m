@@ -69,7 +69,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     [site release];
     [newSites release];
-    [delegate.parentViewController dismissModalViewControllerAnimated:YES];
+    [delegate.parentViewController dismissViewControllerAnimated:YES completion:nil];
     [delegate.tableView reloadData];
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSDictionary *site = [[NSDictionary alloc] initWithObjects:[[[NSArray alloc] initWithObjects:label, url, accessTokens, nil] autorelease] forKeys:[[[NSArray alloc] initWithObjects:siteLabelKey, siteURLKey, siteAccessTokens, nil] autorelease]];
@@ -78,7 +78,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     [site release];
     [newSites release];
-    [delegate.parentViewController dismissModalViewControllerAnimated:YES];
+    [delegate.parentViewController dismissViewControllerAnimated:YES completion:nil];
     [delegate.tableView reloadData];
   }];
 

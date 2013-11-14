@@ -91,8 +91,6 @@
 		1D322B90161510780071E390 /* blue_bkg@2x_ip5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D322B8F161510780071E390 /* blue_bkg@2x_ip5.png */; };
 		1D3C25AA15D2DA2A007A9177 /* DGAddTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C25A815D2DA2A007A9177 /* DGAddTagsViewController.m */; };
 		1D3C25AB15D2DA2A007A9177 /* DGAddTagsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C25A915D2DA2A007A9177 /* DGAddTagsViewController.xib */; };
-		1D40562115E548FA001588BF /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40562015E548FA001588BF /* JSONKit.m */; };
-		1D40562415E54914001588BF /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40562015E548FA001588BF /* JSONKit.m */; };
 		1D40562715E54FEF001588BF /* DGTitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40562615E54FEF001588BF /* DGTitleBarView.m */; };
 		1D40562A15E5B9DF001588BF /* media_field_border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D40562815E5B9DF001588BF /* media_field_border.png */; };
 		1D40562B15E5B9DF001588BF /* media_field_border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D40562915E5B9DF001588BF /* media_field_border@2x.png */; };
@@ -423,8 +421,6 @@
 		1D3C25A715D2DA2A007A9177 /* DGAddTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAddTagsViewController.h; sourceTree = "<group>"; };
 		1D3C25A815D2DA2A007A9177 /* DGAddTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAddTagsViewController.m; sourceTree = "<group>"; };
 		1D3C25A915D2DA2A007A9177 /* DGAddTagsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGAddTagsViewController.xib; sourceTree = "<group>"; };
-		1D40561F15E548FA001588BF /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		1D40562015E548FA001588BF /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		1D40562515E54FEF001588BF /* DGTitleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTitleBarView.h; sourceTree = "<group>"; };
 		1D40562615E54FEF001588BF /* DGTitleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTitleBarView.m; sourceTree = "<group>"; };
 		1D40562815E5B9DF001588BF /* media_field_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = media_field_border.png; sourceTree = "<group>"; };
@@ -853,8 +849,6 @@
 				1D40563715E6A6B1001588BF /* UIImage+Alpha.m */,
 				1D40563815E6A6B2001588BF /* UIImage+RoundedCorner.h */,
 				1D40563915E6A6B3001588BF /* UIImage+RoundedCorner.m */,
-				1D40561F15E548FA001588BF /* JSONKit.h */,
-				1D40562015E548FA001588BF /* JSONKit.m */,
 				1D5204F415AC8D1A002CF8E1 /* NSData_Base64 */,
 				1D499E3C15A76E88001FE429 /* iphone_assets */,
 				1D499E3A15A76E6D001FE429 /* bg@2x.png */,
@@ -1527,7 +1521,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D90EA1115FACC1D00E6835E /* AFImageCache.m in Sources */,
-				1D40562415E54914001588BF /* JSONKit.m in Sources */,
 				1D2378E5158BA474004DC5BF /* main.m in Sources */,
 				1D2378E9158BA474004DC5BF /* DGAppDelegate.m in Sources */,
 				1D2378EE158BA474004DC5BF /* DGMasterViewController.m in Sources */,
@@ -1608,7 +1601,6 @@
 				1D2CEBA2158BE06200D50084 /* DIOSUser.m in Sources */,
 				1D2CEBA4158BE06200D50084 /* DIOSView.m in Sources */,
 				1D1FA0D915B4D8AD00520CB3 /* CustomStatusBar.m in Sources */,
-				1D40562115E548FA001588BF /* JSONKit.m in Sources */,
 				1D40563A15E6A6B4001588BF /* UIImage+Alpha.m in Sources */,
 				1D40563B15E6A6B4001588BF /* UIImage+RoundedCorner.m in Sources */,
 				1D90EA0E15FACC0400E6835E /* AFImageCache.m in Sources */,
@@ -1740,7 +1732,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "Drupal Create/Drupal Create-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1748,6 +1740,7 @@
 				PRODUCT_NAME = Create;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1765,7 +1758,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "Drupal Create/Drupal Create-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1773,6 +1766,7 @@
 				PRODUCT_NAME = Create;
 				PROVISIONING_PROFILE = "759D6A73-28A1-41E6-B24D-0E386FA5CE43";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "759D6A73-28A1-41E6-B24D-0E386FA5CE43";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

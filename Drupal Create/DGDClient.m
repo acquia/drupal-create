@@ -10,7 +10,6 @@
 #import "DIOSNode.h"
 #import "DIOSSession.h"
 #import "DGAppDelegate.h"
-#import "JSONKit.h"
 @implementation DGDClient
 
 + (void)getAutocompleteValues:(NSString *)url
@@ -126,7 +125,9 @@
   [client setAccessToken:[accessTokens objectForKey:@"oauth_token"] secret:[accessTokens objectForKey:@"oauth_token_secret"]];
   [client setParameterEncoding:AFFormURLParameterEncoding];
   
-  NSString *json = [params JSONString];
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:0 error:nil];
+  NSString *json = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
   
   NSMutableDictionary *newParams = [NSMutableDictionary new];
   [newParams setObject:json forKey:@"node"];
