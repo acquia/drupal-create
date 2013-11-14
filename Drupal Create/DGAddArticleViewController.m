@@ -475,7 +475,7 @@
                       }
                     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                       if (operation.response.statusCode == CONTENT_TYPE_ERROR_CODE) {
-                        [self dismissModalViewControllerAnimated:YES];
+                        [self dismissViewControllerAnimated:YES completion:nil];
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"DrupalCreateContentTypesChanged" object:nil];
                         NSString *text = [NSString stringWithFormat:@"%@ is disabled, reloading settings...", contentType];
                         [[AppDelegate customStatusBar] showWithStatusMessage:text hide:NO];
@@ -683,7 +683,6 @@
   self.imgPicker.showsCameraControls = NO;
   self.imgPicker.navigationBarHidden = NO;
   self.imgPicker.toolbarHidden = YES;
-  self.imgPicker.wantsFullScreenLayout = YES;
   currentMediaTag = [[sender index] integerValue];
   currentFileKey = [sender fieldKey];
   self.overlay = [[DGCameraOverlayViewController alloc] initWithNibName:@"DGCameraOverlayViewController" bundle:nil];
@@ -692,8 +691,7 @@
   self.imgPicker.delegate = self.overlay;
   [self.overlay setAddArticleVC:self];
 
-  self.overlay.wantsFullScreenLayout = YES;
-  [self presentModalViewController:self.imgPicker animated:NO];
+  [self presentViewController:self.imgPicker animated:NO completion:nil];
   [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
@@ -875,7 +873,7 @@
       [self.navigationController pushViewController:vc animated:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
       if (operation.response.statusCode == CONTENT_TYPE_ERROR_CODE) {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"DrupalCreateContentTypesChanged" object:nil];
         NSString *text = [NSString stringWithFormat:@"%@ is disabled, reloading settings...", contentType];
         [[AppDelegate customStatusBar] showWithStatusMessage:text hide:NO];
@@ -909,7 +907,7 @@
 - (IBAction)addTags:(id)sender {
   DGAddTagsViewController *vc = [[DGAddTagsViewController alloc] initWithNibName:@"DGAddTagsViewController" bundle:nil];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
-  [self presentModalViewController:navVC animated:YES];
+  [self presentViewController:navVC animated:YES completion:nil];
   [vc release];
   [navVC release];
 }
@@ -1012,13 +1010,13 @@
 
 - (void)cancel:(id)sender {
   [[AppDelegate customStatusBar] hide:0.0f];
-  [self.parentViewController dismissModalViewControllerAnimated:YES];
+  [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 # pragma mark -
 # pragma mark image related methods
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:nil];
   if ([[[fieldsByKeys objectForKey:currentFileKey] objectForKey:@"cardinality"] isEqualToString:@"1"]) {
     [self removeImage:self];
   }
@@ -1076,7 +1074,7 @@
     [[AppDelegate customStatusBar] hide];
     [postButton setEnabled:YES];
     if (operation.response.statusCode == CONTENT_TYPE_ERROR_CODE) {
-      [self dismissModalViewControllerAnimated:YES];
+      [self dismissViewControllerAnimated:YES completion:nil];
       [[NSNotificationCenter defaultCenter] postNotificationName:@"DrupalCreateContentTypesChanged" object:nil];
       NSString *text = [NSString stringWithFormat:@"%@ is disabled, reloading settings...", contentType];
       [[AppDelegate customStatusBar] showWithStatusMessage:text hide:NO];
@@ -1360,14 +1358,14 @@
         [self removeImage:self];
       }
       self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-      [self presentModalViewController:self.imgPicker animated:YES];
+      [self presentViewController:self.imgPicker animated:YES completion:nil];
       break;
     case 1:
       if (removeOldImage) {
         [self removeImage:self];
       }
       self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-      [self presentModalViewController:self.imgPicker animated:YES];
+      [self presentViewController:self.imgPicker animated:YES completion:nil];
       break;
       
     default:
@@ -1526,7 +1524,7 @@
                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
                          [listViewController setShouldUpdate:YES];
                          [[AppDelegate customStatusBar] hide];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSString *text = [NSString stringWithFormat:@"Failed to POST:%d", operation.response.statusCode];
     [[[AppDelegate customStatusBar] statusLabel] setText:text];

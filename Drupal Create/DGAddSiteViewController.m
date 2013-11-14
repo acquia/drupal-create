@@ -44,7 +44,7 @@
 
 - (void)cancel:(id)sender {
   [AppDelegate normalNavigationBar];
-  [self.parentViewController dismissModalViewControllerAnimated:YES];
+  [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad

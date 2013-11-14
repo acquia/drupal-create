@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D0200D815DC0E68005E92C2 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0200D715DC0E68005E92C2 /* libSDWebImage.a */; };
 		1D0200DA15DC0EFC005E92C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0200D915DC0EFC005E92C2 /* MapKit.framework */; };
 		1D06564215ACD6C1009AF200 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D06562415ACD6C1009AF200 /* AFHTTPClient.m */; };
 		1D06564315ACD6C1009AF200 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D06562615ACD6C1009AF200 /* AFHTTPRequestOperation.m */; };
@@ -312,7 +311,6 @@
 		1D0200C815DC0AD6005E92C2 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		1D0200C915DC0AD6005E92C2 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		1D0200CA15DC0AD6005E92C2 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		1D0200D715DC0E68005E92C2 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage.a; sourceTree = "<group>"; };
 		1D0200D915DC0EFC005E92C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1D06562315ACD6C1009AF200 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		1D06562415ACD6C1009AF200 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -665,7 +663,6 @@
 				1D2378D9158BA474004DC5BF /* UIKit.framework in Frameworks */,
 				1D2378DB158BA474004DC5BF /* Foundation.framework in Frameworks */,
 				1D2378DD158BA474004DC5BF /* CoreGraphics.framework in Frameworks */,
-				1D0200D815DC0E68005E92C2 /* libSDWebImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,7 +805,6 @@
 		1D2378D7158BA474004DC5BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D0200D715DC0E68005E92C2 /* libSDWebImage.a */,
 				1DD36D1D15B87E4C0013625F /* libz.dylib */,
 				1DB9F1F3159928A900D800B6 /* QuartzCore.framework */,
 				1D8B0A3E15DACC6F00E946BA /* ImageIO.framework */,

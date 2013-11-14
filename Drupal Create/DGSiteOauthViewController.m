@@ -104,10 +104,10 @@
     if ([[accessTokens allKeys] count] >=1) {
       [AppDelegate updateSiteAccessTokens:[self getURL] accessToken:accessTokens];
 
-      [siteViewController dismissModalViewControllerAnimated:YES];
+      [siteViewController dismissViewControllerAnimated:YES completion:nil];
     }
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-      [siteViewController dismissModalViewControllerAnimated:YES];
+      [siteViewController dismissViewControllerAnimated:YES completion:nil];
   }];
 }
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{

@@ -152,7 +152,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent
                                             animated:NO];
   _customStatusBar = [[CustomStatusBar alloc] initWithFrame:CGRectZero];
   _customStatusBar.rootViewController = [[[UIViewController alloc] init] autorelease];

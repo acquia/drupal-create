@@ -85,7 +85,7 @@
     refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -5, 320, REFRESH_HEADER_HEIGHT)];
     refreshLabel.backgroundColor = [UIColor clearColor];
     refreshLabel.font = [UIFont boldSystemFontOfSize:12.0];
-    refreshLabel.textAlignment = UITextAlignmentCenter;
+    refreshLabel.textAlignment = NSTextAlignmentCenter;
     refreshLabel.textColor = [UIColor whiteColor];
     refreshLabel.layer.shadowColor = [UIColor blackColor].CGColor;
     refreshLabel.layer.shadowOpacity = 1.0;
@@ -95,7 +95,7 @@
     timestampLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 320, REFRESH_HEADER_HEIGHT)];
     timestampLabel.backgroundColor = [UIColor clearColor];
     timestampLabel.font = [UIFont systemFontOfSize:12.0];
-    timestampLabel.textAlignment = UITextAlignmentCenter;
+    timestampLabel.textAlignment = NSTextAlignmentCenter;
     timestampLabel.textColor = [UIColor whiteColor];
     timestampLabel.text = textTimestampUpdate;
   

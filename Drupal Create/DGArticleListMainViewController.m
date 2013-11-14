@@ -248,7 +248,7 @@
   [addArticleVc setMachineName:[machineNames objectAtIndex:0]];
   [addArticleVc setSiteFields:_fields];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:addArticleVc];
-  [self presentModalViewController:navVC animated:YES];
+  [self presentViewController:navVC animated:YES completion:nil];
   [addArticleVc release];
   [navVC release];
   
@@ -262,7 +262,7 @@
   [addArticleVc setMachineName:[machineNames objectAtIndex:1]];
   [addArticleVc setSiteFields:_fields];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:addArticleVc];
-  [self presentModalViewController:navVC animated:YES];
+  [self presentViewController:navVC animated:YES completion:nil];
   [addArticleVc release];
   [navVC release];
 }
@@ -275,7 +275,7 @@
   [addArticleVc setMachineName:[machineNames objectAtIndex:2]];
   [addArticleVc setSiteFields:_fields];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:addArticleVc];
-  [self presentModalViewController:navVC animated:YES];
+  [self presentViewController:navVC animated:YES completion:nil];
   [addArticleVc release];
   [navVC release];
 }
@@ -288,7 +288,7 @@
   [addArticleVc setMachineName:[machineNames objectAtIndex:3]];
   [addArticleVc setSiteFields:_fields];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:addArticleVc];
-  [self presentModalViewController:navVC animated:YES];
+  [self presentViewController:navVC animated:YES completion:nil];
   [addArticleVc release];
   [navVC release];  
 }
