@@ -38,7 +38,7 @@
   [uiCancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [uiCancelButton.titleLabel setFont:[UIFont boldSystemFontOfSize:12.0f]];
   [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:uiCancelButton]];
-
+  [self loadWebView];
     // Do any additional setup after loading the view from its nib.
   backCount = 0;
 }
