@@ -110,7 +110,7 @@
                       [[AppDelegate customStatusBar] hide];
                     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                       if (operation.response.statusCode == CONTENT_TYPE_ERROR_CODE) {
-                        [self dismissModalViewControllerAnimated:YES];
+                        [self dismissViewControllerAnimated:YES completion:nil];
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"DrupalCreateContentTypesChanged" object:nil];
                         NSString *text = [NSString stringWithFormat:@"%@ is disabled, reloading settings...", contentType];
                         [[AppDelegate customStatusBar] showWithStatusMessage:text hide:NO];
@@ -203,7 +203,7 @@
                   }
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                   if (operation.response.statusCode == CONTENT_TYPE_ERROR_CODE) {
-                    [self dismissModalViewControllerAnimated:YES];
+                    [self dismissViewControllerAnimated:YES completion:nil];
                     [[NSNotificationCenter defaultCenter] postNotificationName:@"DrupalCreateContentTypesChanged" object:nil];
                     NSString *text = [NSString stringWithFormat:@"%@ is disabled, reloading settings...", contentType];
                     [[AppDelegate customStatusBar] showWithStatusMessage:text hide:NO];

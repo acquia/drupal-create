@@ -197,9 +197,9 @@
   [AppDelegate addSiteNavigationBar];
   UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:addsite];
   if (sender == self) {
-    [self presentModalViewController:naviController animated:NO];
+      [self presentViewController:naviController animated:NO completion:nil];
   } else {
-    [self presentModalViewController:naviController animated:YES];
+    [self presentViewController:naviController animated:YES completion:nil];
   }
 
   [addsite release];

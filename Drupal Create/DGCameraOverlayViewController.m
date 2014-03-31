@@ -64,7 +64,7 @@
   [addArticleVC release];
 }
 - (IBAction)cancel:(id)sender {
-  [addArticleVC dismissModalViewControllerAnimated:YES];
+  [addArticleVC dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {

@@ -18,7 +18,7 @@
       sep = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_separator.png"]];
       [sep setFrame:CGRectMake(15, 44, 290, 1)];
       cellText = [[UILabel alloc] initWithFrame:CGRectMake(120, 3, 170, 40)];
-      [cellText setTextAlignment:UITextAlignmentRight];
+      [cellText setTextAlignment:NSTextAlignmentRight];
       [cellText setBackgroundColor:[UIColor clearColor]];
       [cellText setFont:[UIFont systemFontOfSize:14.0]];
       [cellText setTextColor:[AppDelegate colorWithHexString:@"2389C1"]];
