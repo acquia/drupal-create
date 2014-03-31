@@ -275,6 +275,7 @@
 		1DF1DD50158FA20E00F3C376 /* DGDClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DD4F158FA20E00F3C376 /* DGDClient.m */; };
 		1DF1DD5F158FA7A000F3C376 /* DGSiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DD5D158FA7A000F3C376 /* DGSiteListViewController.m */; };
 		1DF1DD60158FA7A000F3C376 /* DGSiteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF1DD5E158FA7A000F3C376 /* DGSiteListViewController.xib */; };
+		601999FA18554A630022274D /* App Screen Backgrounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601999F918554A630022274D /* App Screen Backgrounds.xcassets */; };
 		6516A05315ED7C5400B3C26A /* DGImageSizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6516A04D15ED7C5400B3C26A /* DGImageSizeCell.m */; };
 		6516A05415ED7C5400B3C26A /* DGImageSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6516A04F15ED7C5400B3C26A /* DGImageSizeViewController.m */; };
 		6516A05515ED7C5400B3C26A /* DGImageSizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6516A05015ED7C5400B3C26A /* DGImageSizeViewController.xib */; };
@@ -640,6 +641,7 @@
 		1DF1DD5C158FA7A000F3C376 /* DGSiteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGSiteListViewController.h; sourceTree = "<group>"; };
 		1DF1DD5D158FA7A000F3C376 /* DGSiteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGSiteListViewController.m; sourceTree = "<group>"; };
 		1DF1DD5E158FA7A000F3C376 /* DGSiteListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGSiteListViewController.xib; sourceTree = "<group>"; };
+		601999F918554A630022274D /* App Screen Backgrounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "App Screen Backgrounds.xcassets"; sourceTree = "<group>"; };
 		6516A04C15ED7C5400B3C26A /* DGImageSizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGImageSizeCell.h; sourceTree = "<group>"; };
 		6516A04D15ED7C5400B3C26A /* DGImageSizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGImageSizeCell.m; sourceTree = "<group>"; };
 		6516A04E15ED7C5400B3C26A /* DGImageSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGImageSizeViewController.h; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 		1D2378C9158BA474004DC5BF = {
 			isa = PBXGroup;
 			children = (
+				601999F918554A630022274D /* App Screen Backgrounds.xcassets */,
 				1D7D66181614B3EA009E3807 /* CFNetwork.framework */,
 				1D1B5DB315EC47C400986337 /* libxml2.dylib */,
 				1DA0606415EAFABC000B4C2E /* SystemConfiguration.framework */,
@@ -1277,7 +1280,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DG;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Acquia;
 			};
 			buildConfigurationList = 1D2378CE158BA474004DC5BF /* Build configuration list for PBXProject "Drupal Create" */;
@@ -1475,6 +1478,7 @@
 				1DB6ED3E15FE6C4500A6F5DB /* share_button_on.png in Resources */,
 				1DB6ED3F15FE6C4500A6F5DB /* share_button_on@2x.png in Resources */,
 				1D43E9EE160BAF3A005CBEB1 /* DGCameraOverlayViewController.xib in Resources */,
+				601999FA18554A630022274D /* App Screen Backgrounds.xcassets in Resources */,
 				1D5C5D8516135EA500989A33 /* loading_indicator.png in Resources */,
 				1D322B8D161509E80071E390 /* Default-568h@2x.png in Resources */,
 				1D322B90161510780071E390 /* blue_bkg@2x_ip5.png in Resources */,
@@ -1645,11 +1649,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1662,21 +1667,27 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"<Multiple",
 					"values>",
 					/usr/include/libxml2,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1684,32 +1695,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"<Multiple",
 					"values>",
 					/usr/include/libxml2,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1717,11 +1734,14 @@
 		1D237910158BA474004DC5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = "Drupal Create/Drupal Create.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Drupal Create/Drupal Create-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
 					"<Multiple",
 					"values>",
@@ -1744,10 +1764,13 @@
 		1D237911158BA474004DC5BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Acquia, Inc.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Acquia, Inc.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Drupal Create/Drupal Create-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
 					"<Multiple",
 					"values>",
@@ -1777,6 +1800,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Drupal Create/Drupal Create-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Drupal CreateTests/Drupal CreateTests-Info.plist";
 				PRODUCT_NAME = "Drupal CreateTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1794,6 +1818,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Drupal Create/Drupal Create-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Drupal CreateTests/Drupal CreateTests-Info.plist";
 				PRODUCT_NAME = "Drupal CreateTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
